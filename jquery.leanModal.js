@@ -7,7 +7,7 @@
                 top: 100,
                 overlay: 0.5,
                 closeButton: null,
-                posType: 'absolute'
+                posType: 'fixed'
             }
 
             $("body").append("<div id='lean_overlay'></div>");
@@ -20,13 +20,13 @@
                 $(this).click(function(e) {
                     var layer =  $("#lean_overlay");
 
-                    if( jQuery.isFunction(toppos) && toppos != 'fixed' ){
+                    if( jQuery.isFunction(posTop) && posTop != 'fixed' ){
                         posTop = o.top();
                     };
 
                     var modal_id = $(this).attr("href");
 
-                    $(this).click(function() {
+                    layer.click(function() {
                         close_modal(modal_id);
                     });
 

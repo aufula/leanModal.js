@@ -1,3 +1,24 @@
+/**
+ * ===================
+ * some style
+ * ===================
+#lean_overlay {
+    position: fixed;
+    z-index:100;
+    top: 0px;
+    left: 0px;
+    height:100%;
+    width:100%;
+    background: #000;
+    display: none;
+}
+ *
+ * usage
+ * ===================
+ * $(".trigger_selector").leanModal();
+ * 
+ */
+
 (function($){
 
     $.fn.extend({
